@@ -1,0 +1,24 @@
+{
+  "name": "react-fetch-input",
+  "version": "1.0.0",
+  "description": "Fetch data from a server and display the results",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickviragdesign/react-fetch-input.git"
+  },
+  "keywords": [
+    "react",
+    "fetch",
+    "input"
+  ],
+  "author": "Nick Virag",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nickviragdesign/react-fetch-input/issues"
+  },
+  "homepage": "https://github.com/nickviragdesign/react-fetch-input#readme"
+}
