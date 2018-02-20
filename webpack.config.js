@@ -8,7 +8,6 @@ module.exports = {
 		filename: 'FetchInput.js',
 		library: 'FetchInput',
 		libraryTarget: 'umd',
-		libraryExport: 'FetchInput'
 	},
 	module: {
 		rules: [
@@ -19,6 +18,10 @@ module.exports = {
 			}
 		]
 	},
+	externals: {
+		'react': 'React',
+		'react-dom': 'ReactDOM'
+	}
 	plugins: [new HtmlWebpackPlugin({
 		template: 'src/index.html'
 	})],

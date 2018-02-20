@@ -22008,6 +22008,8 @@ var FetchInput = function (_Component) {
     return FetchInput;
 }(_react.Component);
 
+console.log(FetchInput);
+
 module.exports = FetchInput;
 
 /***/ }),

@@ -9,4 +9,6 @@ class FetchInput extends Component {
     }
 }
 
+console.log(FetchInput);
+
 module.exports = FetchInput;
