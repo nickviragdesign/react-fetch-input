@@ -7,7 +7,8 @@ module.exports = {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'FetchInput.js',
 		library: 'FetchInput',
-		libraryTarget: 'umd'
+		libraryTarget: 'umd',
+		libraryExport: 'FetchInput'
 	},
 	module: {
 		rules: [
