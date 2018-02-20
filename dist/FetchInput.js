@@ -4651,7 +4651,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 __webpack_require__(104);
 
-
+console.log('FetchInput');
 _reactDom2.default.render(_react2.default.createElement(_FetchInput2.default, null), document.getElementById('root'));
 
 /***/ }),
@@ -22004,7 +22004,7 @@ var FetchInput = function (_Component) {
             return _react2.default.createElement(
                 'div',
                 { className: 'App' },
-                'Test'
+                'Hello'
             );
         }
     }]);
