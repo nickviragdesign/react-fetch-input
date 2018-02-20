@@ -2,7 +2,7 @@
   "name": "react-fetch-input",
   "version": "1.0.5",
   "description": "Fetch data from a server and display the results",
-  "main": "./src/index.html",
+  "main": "./dist/FetchInput.js",
   "scripts": {
     "test": "jest",
     "start": "webpack && webpack-dev-server --open --watch",
