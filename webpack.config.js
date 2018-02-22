@@ -18,9 +18,6 @@ module.exports = {
 			}
 		]
 	},
-	externals: {
-		'react': 'React'
-	},
 	plugins: [new HtmlWebpackPlugin({
 		template: 'src/index.html'
 	})],
