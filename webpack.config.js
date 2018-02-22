@@ -19,8 +19,7 @@ module.exports = {
 		]
 	},
 	externals: {
-		'react': 'React',
-		'react-dom': 'ReactDOM'
+		'react': 'react'
 	}
 	plugins: [new HtmlWebpackPlugin({
 		template: 'src/index.html'
