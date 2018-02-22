@@ -1,5 +1,3 @@
-require('babel-polyfill');
-import React, { Component } from 'react';
 
 class FetchInput extends Component {
     render() {
