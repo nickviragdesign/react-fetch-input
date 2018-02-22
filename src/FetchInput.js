@@ -1,5 +1,7 @@
+require('babel-polyfill');
+import React, { Component } from 'react';
 
-class FetchInput extends Component {
+export default class FetchInput extends Component {
     render() {
         return (
             <div className="App">Hello</div>
@@ -8,5 +10,3 @@ class FetchInput extends Component {
 }
 
 console.log(FetchInput);
-
-module.exports = FetchInput;
