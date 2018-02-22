@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-	entry: ['./src/index.js'],
+	entry: ['./src/FetchInput.js'],
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'FetchInput.js',
@@ -19,8 +19,8 @@ module.exports = {
 		]
 	},
 	externals: {
-		'react': 'react'
-	}
+		'react': 'React'
+	},
 	plugins: [new HtmlWebpackPlugin({
 		template: 'src/index.html'
 	})],
