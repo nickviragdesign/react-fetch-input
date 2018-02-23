@@ -18,19 +18,19 @@ export default class FetchInput extends Component {
                 </div>
                 <form
                     onSubmit=
-                        { e => {
-                            e.preventDefault();
-                            this.props.fetchTopics(this.props.queryString);
-                        }}
+                        { e =>
+                            { e.preventDefault();
+                            this.props.fetchTopics(this.props.queryString); }
+                        }
                     className="Input"
                 >
                     <TextField
                         hintText="Brooklyn, NY"
                         floatingLabelText="Location"
                         onChange=
-                            { e => {
-                                this.props.setQueryString(e.target.value);
-                            }}
+                            { e =>
+                                { this.props.setQueryString(e.target.value); }
+                            }
                         value={this.props.queryString}
                     /><br />
                     <RaisedButton type="submit" label="Primary" primary={true} style={style} />
