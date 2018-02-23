@@ -20,12 +20,9 @@ module.exports = {
 	},
 	resolve: {
 		alias: {
-			react: path.resolve('./node_modules/react'),
+			'React': path.resolve('./node_modules/react'),
+			'ReactDOM': path.resolve('./node_modules/react-dom')
 		},
-	},
-	externals: {
-		'React': 'react',
-		'ReactDOM': 'react-dom'
 	},
 	plugins: [new HtmlWebpackPlugin({
 		template: 'src/index.html'
