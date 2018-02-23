@@ -24155,36 +24155,32 @@ var FetchInput = function (_Component) {
             var _this2 = this;
 
             return _react2.default.createElement(
-                'div',
+                _MuiThemeProvider2.default,
                 null,
                 _react2.default.createElement(
-                    _MuiThemeProvider2.default,
-                    null,
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'App' },
-                        'Hello'
-                    ),
-                    _react2.default.createElement(
-                        'form',
-                        {
-                            onSubmit: function onSubmit(e) {
-                                e.preventDefault();
-                                _this2.props.fetchTopics(_this2.props.queryString);
-                            },
-                            className: 'Input'
+                    'div',
+                    { className: 'App' },
+                    'Hello'
+                ),
+                _react2.default.createElement(
+                    'form',
+                    {
+                        onSubmit: function onSubmit(e) {
+                            e.preventDefault();
+                            _this2.props.fetchTopics(_this2.props.queryString);
                         },
-                        _react2.default.createElement(_TextField2.default, {
-                            hintText: 'Brooklyn, NY',
-                            floatingLabelText: 'Location',
-                            onChange: function onChange(e) {
-                                _this2.props.setQueryString(e.target.value);
-                            },
-                            value: this.props.queryString
-                        }),
-                        _react2.default.createElement('br', null),
-                        _react2.default.createElement(_RaisedButton2.default, { type: 'submit', label: 'Primary', primary: true, style: style })
-                    )
+                        className: 'Input'
+                    },
+                    _react2.default.createElement(_TextField2.default, {
+                        hintText: 'Brooklyn, NY',
+                        floatingLabelText: 'Location',
+                        onChange: function onChange(e) {
+                            _this2.props.setQueryString(e.target.value);
+                        },
+                        value: this.props.queryString
+                    }),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement(_RaisedButton2.default, { type: 'submit', label: 'Primary', primary: true, style: style })
                 )
             );
         }
