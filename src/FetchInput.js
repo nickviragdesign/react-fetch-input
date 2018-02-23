@@ -1,9 +1,5 @@
 require('babel-polyfill');
 import React, { Component } from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import TextField from 'material-ui/TextField';
-import RaisedButton from 'material-ui/RaisedButton';
-import CircularProgress from 'material-ui/CircularProgress';
 
 const style = {
     margin: 12
@@ -12,7 +8,7 @@ const style = {
 export default class FetchInput extends Component {
     render() {
         return (
-            <MuiThemeProvider>
+            <div>
                 <div className="App">
                     Hello
                 </div>
@@ -24,18 +20,18 @@ export default class FetchInput extends Component {
                         }
                     className="Input"
                 >
-                    <TextField
-                        hintText="Brooklyn, NY"
-                        floatingLabelText="Location"
+                    <input
                         onChange=
                             { e =>
                                 { this.props.setQueryString(e.target.value); }
                             }
                         value={this.props.queryString}
                     /><br />
-                    <RaisedButton type="submit" label="Primary" primary={true} style={style} />
+                    <button type="submit" style={style}>
+                        Go
+                    </button>
                 </form>
-            </MuiThemeProvider>
+            </div>
         );
     }
 }
