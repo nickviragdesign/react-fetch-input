@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-	entry: ['./src/FetchInput.js'],
+	entry: ['./src/index.js'],
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'FetchInput.js',
@@ -17,6 +17,11 @@ module.exports = {
 				exclude: /node_modules/
 			}
 		]
+	},
+	resolve: {
+		alias: {
+			react: path.resolve('./node_modules/react'),
+		},
 	},
 	externals: {
 		'React': 'react',
