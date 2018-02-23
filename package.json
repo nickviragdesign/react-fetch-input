@@ -1,6 +1,6 @@
 {
   "name": "react-fetch-input",
-  "version": "1.0.24",
+  "version": "1.0.23",
   "description": "Fetch data from a server and display the results",
   "main": "./dist/FetchInput.js",
   "scripts": {
@@ -35,13 +35,11 @@
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.1"
   },
-  "peerDependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "material-ui": "^0.20.0"
-  },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "material-ui": "^0.20.0",
     "react-redux": "^5.0.7",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
