@@ -1,6 +1,6 @@
 {
   "name": "react-fetch-input",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "Fetch data from a server and display the results",
   "main": "./dist/FetchInput.js",
   "scripts": {
