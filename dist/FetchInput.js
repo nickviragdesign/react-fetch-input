@@ -21976,7 +21976,7 @@ module.exports = camelize;
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -21997,68 +21997,73 @@ __webpack_require__(104);
 
 
 var style = {
-    margin: 12
+  margin: 12
 };
 
 var FetchInput = function (_Component) {
-    _inherits(FetchInput, _Component);
+  _inherits(FetchInput, _Component);
 
-    function FetchInput(props) {
-        _classCallCheck(this, FetchInput);
+  function FetchInput(props) {
+    _classCallCheck(this, FetchInput);
 
-        var _this = _possibleConstructorReturn(this, (FetchInput.__proto__ || Object.getPrototypeOf(FetchInput)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (FetchInput.__proto__ || Object.getPrototypeOf(FetchInput)).call(this, props));
 
-        _this.state = {
-            queryString: null
-        };
-        return _this;
+    _this.state = {
+      queryString: null
+    };
+    return _this;
+  }
+
+  _createClass(FetchInput, [{
+    key: 'setQueryString',
+    value: function setQueryString(value) {
+      this.setState({ queryString: value });
     }
+  }, {
+    key: 'handleSubmit',
+    value: function handleSubmit() {
+      if (!this.props.action) return;
+      fetch(this.props.action + this.state.queryString).then(function (response) {
+        return response.json();
+      }).then(function (json) {
+        return console.log(json);
+      });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
 
-    _createClass(FetchInput, [{
-        key: 'setQueryString',
-        value: function setQueryString(value) {
-            this.setState({ queryString: value });
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            var _this2 = this;
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'form',
+          {
+            onSubmit: function onSubmit(e) {
+              e.preventDefault();
+              _this2.handleSubmit(_this2.state.queryString);
+            },
+            className: 'Input'
+          },
+          _react2.default.createElement('input', {
+            onChange: function onChange(e) {
+              return _this2.setQueryString(e.target.value);
+            },
+            value: this.state.queryString
+          }),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            'button',
+            { type: 'submit', style: style },
+            'Go'
+          )
+        )
+      );
+    }
+  }]);
 
-            return _react2.default.createElement(
-                'div',
-                null,
-                _react2.default.createElement(
-                    'div',
-                    { className: 'App' },
-                    'Hello'
-                ),
-                _react2.default.createElement(
-                    'form',
-                    {
-                        onSubmit: function onSubmit(e) {
-                            e.preventDefault();
-                            _this2.props.fetchTopics(_this2.state.queryString);
-                        },
-                        className: 'Input'
-                    },
-                    _react2.default.createElement('input', {
-                        onChange: function onChange(e) {
-                            _this2.setQueryString(e.target.value);
-                        },
-                        value: this.props.queryString
-                    }),
-                    _react2.default.createElement('br', null),
-                    _react2.default.createElement(
-                        'button',
-                        { type: 'submit', style: style },
-                        'Go'
-                    )
-                )
-            );
-        }
-    }]);
-
-    return FetchInput;
+  return FetchInput;
 }(_react.Component);
 
 exports.default = FetchInput;
