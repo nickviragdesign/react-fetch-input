@@ -6,8 +6,11 @@ const style = {
 };
 
 export default class FetchInput extends Component {
-    this.state = {
-        queryString: null
+    constructor(props) {
+        super(props)
+        this.state = {
+            queryString: null
+        }
     }
 
     setQueryString(value) {

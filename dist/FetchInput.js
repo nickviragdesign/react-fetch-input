@@ -22003,13 +22003,23 @@ var style = {
 var FetchInput = function (_Component) {
     _inherits(FetchInput, _Component);
 
-    function FetchInput() {
+    function FetchInput(props) {
         _classCallCheck(this, FetchInput);
 
-        return _possibleConstructorReturn(this, (FetchInput.__proto__ || Object.getPrototypeOf(FetchInput)).apply(this, arguments));
+        var _this = _possibleConstructorReturn(this, (FetchInput.__proto__ || Object.getPrototypeOf(FetchInput)).call(this, props));
+
+        _this.state = {
+            queryString: null
+        };
+        return _this;
     }
 
     _createClass(FetchInput, [{
+        key: 'setQueryString',
+        value: function setQueryString(value) {
+            this.setState({ queryString: value });
+        }
+    }, {
         key: 'render',
         value: function render() {
             var _this2 = this;
@@ -22027,13 +22037,13 @@ var FetchInput = function (_Component) {
                     {
                         onSubmit: function onSubmit(e) {
                             e.preventDefault();
-                            _this2.props.fetchTopics(_this2.props.queryString);
+                            _this2.props.fetchTopics(_this2.state.queryString);
                         },
                         className: 'Input'
                     },
                     _react2.default.createElement('input', {
                         onChange: function onChange(e) {
-                            _this2.props.setQueryString(e.target.value);
+                            _this2.setQueryString(e.target.value);
                         },
                         value: this.props.queryString
                     }),
