@@ -6,6 +6,14 @@ const style = {
 };
 
 export default class FetchInput extends Component {
+    this.state = {
+        queryString: null
+    }
+
+    setQueryString(value) {
+        this.setState({queryString: value})
+    }
+
     render() {
         return (
             <div>
@@ -16,14 +24,14 @@ export default class FetchInput extends Component {
                     onSubmit=
                         { e =>
                             { e.preventDefault();
-                            this.props.fetchTopics(this.props.queryString); }
+                            this.props.fetchTopics(this.state.queryString); }
                         }
                     className="Input"
                 >
                     <input
                         onChange=
                             { e =>
-                                { this.props.setQueryString(e.target.value); }
+                                { this.setQueryString(e.target.value); }
                             }
                         value={this.props.queryString}
                     /><br />
